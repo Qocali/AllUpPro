@@ -9,5 +9,6 @@ namespace AllUp.ViewModels
     public class HomeVM
     {
         public List<Category> categories { get; set; }
+        public Translate Translates { get; set; }
     }
 }

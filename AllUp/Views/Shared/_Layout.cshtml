@@ -7,7 +7,7 @@
     <meta charset="utf-8">
 
     <!--====== Title ======-->
-    <title>Allup - Electronics Responsive eCommerce HTML Template.</title>
+    <title>HikVision - Azerbaijan Official Cite.</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,11 +90,11 @@
                                 </li>
                                 <li>
                                     <div class="dropdown">
-                                        <button type="button" id="langue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/assets/images/flag/1.jpg" alt=""> English <i class="icon ion-chevron-down"></i></button>
+                                        <button type="button" id="langue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/assets/images/flag/1.jpg" alt=""> Translate <i class="icon ion-chevron-down"></i></button>
 
                                         <ul class="dropdown-menu" aria-labelledby="langue">
-                                            <li><a href="#"><img src="~/assets/images/flag/1.jpg" alt=""> English</a></li>
-                                            <li><a href="#"><img src="~/assets/images/flag/2.jpg" alt=""> Français</a></li>
+                                            <li><a asp-controller="Home" asp-action="Translate"><img src="~/assets/images/5bbc1dd962240.jpg" alt="">Russian</a></li>
+                                            <li><a asp-controller="Home" asp-action="Index" ><img src="~/assets/images/American-flag-icon-vector-PNG.png" alt="">English</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -111,7 +111,7 @@
                             <div class="header-logo-contact d-flex  ">
                                 <div class="desktop-logo">
                                     <a href="index.html">
-                                        <img src="~/assets/images/logo.png" alt="Logo">
+                                        <img width="255" height="34" src="https://hikvision.co.az/wp-content/uploads/2021/12/logo.svg" class="attachment-full size-full wvs-archive-product-image" alt="" decoding="async" loading="lazy">
                                     </a>
                                 </div> <!-- desktop logo -->
                             </div>
@@ -1235,7 +1235,26 @@
     <!--====== Main Activation js ======-->
     <script src="~/assets/js/main.js"></script>
 
-
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        // Load the google elements
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+        function onLoad() {
+            var options = {
+                sourceLanguage:
+                    google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage:
+                    [google.elements.transliteration.LanguageCode.RUSSIAN],
+                transliterationEnabled: true
+            }
+            // Create a Instance on TransliterationControl
+            var control = new google.elements.transliteration.TransliterationControl(options);
+            control.makeTransliteratable(['RussianLanguage']);
+        }
+        google.setOnLoadCallback(onLoad);
+    </script>
 
 
 </body>

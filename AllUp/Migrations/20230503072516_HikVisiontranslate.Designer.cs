@@ -4,14 +4,16 @@ using AllUp.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AllUp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230503072516_HikVisiontranslate")]
+    partial class HikVisiontranslate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,22 +54,10 @@ namespace AllUp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CardSubTitle")
+                    b.Property<string>("Englishlanguage")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CardTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CategoryName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HeaderSubtitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HeaderTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("language")
+                    b.Property<string>("RussianLanguage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

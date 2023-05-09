@@ -14,5 +14,6 @@ namespace AllUp.DAL
                 
         }
        public DbSet<Category> Categories { get; set; }
+        public DbSet<Translate> Translate { get; set; }
     }
 }
